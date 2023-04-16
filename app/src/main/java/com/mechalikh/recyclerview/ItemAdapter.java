@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemViewHolder> {
@@ -30,7 +32,11 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemViewHolder> {
 
         holder.itemNameTextView.setText(item.getName());
         holder.itemDescriptionTextView.setText(item.getDescription());
-        holder.itemImageView.setImageResource(item.getImageResourceId());
+        holder.itemPriceTextView.setText(item.getPrice());
+
+        Glide.with(holder.itemView.getContext())
+                .load(item.getImage())
+                .into(holder.itemImageView);
     }
 
     @Override

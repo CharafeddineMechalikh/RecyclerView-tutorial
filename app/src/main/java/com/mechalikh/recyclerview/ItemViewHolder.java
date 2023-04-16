@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide;
 public class ItemViewHolder extends RecyclerView.ViewHolder {
     public TextView itemNameTextView;
     public TextView itemDescriptionTextView;
+    public TextView itemPriceTextView;
     public ImageView itemImageView;
 
     public ItemViewHolder(View itemView) {
@@ -19,15 +20,9 @@ public class ItemViewHolder extends RecyclerView.ViewHolder {
         itemNameTextView = itemView.findViewById(R.id.item_name_text_view);
         itemDescriptionTextView = itemView.findViewById(R.id.item_description_text_view);
         itemImageView = itemView.findViewById(R.id.item_image_view);
+        itemPriceTextView = itemView.findViewById(R.id.item_price_text_view);
     }
 
-    public void bind(Item item) {
-        itemNameTextView.setText(item.getName());
-        itemDescriptionTextView.setText(item.getDescription());
 
-        Glide.with(itemView.getContext())
-                .load(item.getImage())
-                .into(itemImageView);
-    }
 
 }

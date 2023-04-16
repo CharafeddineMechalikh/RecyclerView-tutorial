@@ -1,6 +1,7 @@
 package com.mechalikh.recyclerview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -29,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
     private List<Item> createItemList() {
         // Replace with your own data source
         List<Item> items = new ArrayList<>();
-        items.add(new Item("Item 1", "Description 1", "https://www.example.com/item1.jpg"));
-        items.add(new Item("Item 2", "Description 2", "https://www.example.com/item2.jpg"));
-        items.add(new Item("Item 3", "Description 3", "https://www.example.com/item3.jpg"));
+        items.add(new Item("Item 1", "Description 1", "https://www.example.com/item1.jpg", "100.00"));
+        items.add(new Item("Item 2", "Description 2", "https://www.example.com/item2.jpg", "200.00"));
+        items.add(new Item("Item 3", "Description 3", "https://www.example.com/item3.jpg", "300.00"));
         return items;
     }
 

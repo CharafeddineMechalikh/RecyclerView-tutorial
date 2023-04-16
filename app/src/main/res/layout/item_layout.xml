@@ -9,7 +9,7 @@
         android:id="@+id/item_image_view"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/item_placeholder"
+        android:src="@drawable/ic_launcher_background"
         android:scaleType="centerCrop"/>
 
     <LinearLayout
